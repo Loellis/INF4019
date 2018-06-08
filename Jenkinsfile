@@ -20,6 +20,7 @@ pipeline {
 		}
 		success {
 			slackSend channel: '#notifications',
+			color: "good",
 			message: "The pipeline ${currentBuild.fullDisplayName} was successfully built!"
 		}
 	}

@@ -65,6 +65,8 @@ fi
 if [ $errors -ne 0 ]
 then
 	echo "Script finished with $errors errors."
+	echo "See specified error messages above."
+	exit -1
 else
 	echo "Script finished with no errors."
 fi
