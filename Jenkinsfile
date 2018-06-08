@@ -12,4 +12,15 @@ pipeline {
 			}
 		}
 	}
+	post {
+		failure {
+			slackSend channel: '#notifications',
+			color: 'danger',
+			message: "The pipeline ${currentBuild.fullDisplayName} failed."
+		}
+		success {
+			slackSend channel: '#notifications',
+			message: "The pipeline ${currentBuild.fullDisplayName} was successfully built!"
+		}
+	}
 }
