@@ -16,6 +16,8 @@ pipeline {
 				sh "docker run -dit -p 39001:80 --name webserver loellis/website:v1"
 				sh "docker cp index.html webserver:/var/www/index.html"
 				sh "docker cp style.css webserver:/var/www/style.css"
+			}
+		}
 	}
 	post {
 		failure {
