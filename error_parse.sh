@@ -69,5 +69,7 @@ then
 	exit -1
 else
 	echo "Script finished with no errors."
+	echo "Continuing to build webserver!"
+	./build_webserver.sh
 fi
 
