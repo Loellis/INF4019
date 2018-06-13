@@ -50,7 +50,7 @@ fi
 #Test if the necessary content (Hello world) is present
 if [[ $content != *"Hello world"*  ]]
 then
-	errors=$((error+1))
+	errors=$((errors+1))
 	echo
 	echo "############################################"
 	echo "#    ERROR: Crucial content is missing!    #"
